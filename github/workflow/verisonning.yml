@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  # build:
-  #   name: Release Build
-  #   strategy:
-  #     matrix:
-  #       node-version: [16.x]
-  release-application:
+  build:
+    name: Release Build
+    strategy:
+      matrix:
+        node-version: [16.x]
+    # release-application:
     runs-on: ubuntu-latest
     steps:
       - name: Github Release 최신 tag 받아오기
