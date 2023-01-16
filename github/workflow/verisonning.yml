@@ -2,8 +2,6 @@ name: Release Drafter
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   echo:
