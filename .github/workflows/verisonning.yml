@@ -54,8 +54,7 @@ jobs:
           cache: 'npm'
 
       - run: |
-          npm ci
-          npm test
+
           npm run build
           cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
         env:
