@@ -18,11 +18,11 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1 # 가져다 쓸 auto tagging 프로그램
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # secrets.GITHUB_TOKEN 는 자동생성됨
+          github_token: ${{ secrets.TOKEN }} # secrets.GITHUB_TOKEN 는 자동생성됨
       - name: Create a GitHub release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           tag_name: ${{ steps.tag_version.outputs.new_tag }}
           release_name: Release ${{ steps.tag_version.outputs.new_tag }}
