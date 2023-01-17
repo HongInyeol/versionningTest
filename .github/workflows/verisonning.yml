@@ -18,16 +18,16 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1 # 가져다 쓸 auto tagging 프로그램
         with:
-          github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.TOKEN }} #레포지도리에 시크린에 깃헙토큰 추가
 
       - name: Create a GitHub release
-        uses: actions/create-release@latest
+        uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          tag_name: ${{ steps.tag_version.outputs.new_tag }}
-          release_name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }} 이게 바디였단말이야
+          tag_name: ${{ steps.tag_version.outputs.new_tag }} #상위 tag_version의 output 값을 tag_name으로
+          release_name: Release ${{ steps.tag_version.outputs.new_tag }} #릴리즈 이름
+          body: ${{ steps.tag_version.outputs.changelog }} 이게 바디였단말이야 #릴리즈 내용
 
       # - name: Github Release 최신 tag 받아오기
       #   id: tag_version
@@ -48,15 +48,18 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Installing Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2 # 노드실행 ?
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: |
+      - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
-          cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
+          cd
+          ./build && zip -r 
+          ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
+          ./*
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Release Asset
