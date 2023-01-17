@@ -56,8 +56,7 @@ jobs:
       - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
-          cd
-          ./build && zip -r 
+          cd && ./build && zip -r 
           ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
           ./*
         env:
