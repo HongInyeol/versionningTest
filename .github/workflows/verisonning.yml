@@ -56,7 +56,10 @@ jobs:
       - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
-          cdecho ./*
+          echo folderSearch
+          cd
+          echo './*'
+          echo ./*
           echo ../*
           echo ./factory/*
           echo ./perflog/*
