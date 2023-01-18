@@ -62,15 +62,15 @@ jobs:
 
           cd
           build
-          zip -r 
-          ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
-          ./*
-
-
-          # cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
-      - run: |
           pwd
           ls -la
+
+          # zip -r 
+          # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
+          # ./*
+
+
+          # # cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Release Asset
