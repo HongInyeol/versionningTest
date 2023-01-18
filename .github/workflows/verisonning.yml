@@ -1,9 +1,9 @@
 name: Release Drafter
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - version
 
 jobs:
   build:
@@ -58,12 +58,15 @@ jobs:
           npm run build
           echo folderSearch
           cd
-          echo onTop
           pwd
           ls -la
-          echo ./build
+          ../
+          pwd
+          ls -la
+          ../
+          pwd
+          ls -la
 
-          echo searchEnd
 
           # cd && ./build && zip -r 
           # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
