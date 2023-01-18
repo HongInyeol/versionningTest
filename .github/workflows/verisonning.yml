@@ -57,17 +57,11 @@ jobs:
           npm install
           npm run build
           echo folderSearch
-          ~
-          echo ls
-          echo './*'
-          echo ./*
-          echo ../*
-          echo ./factory/*
-          echo ./perflog/*
-          echo ./runners/*
-          echo ./warmup/*
-          echo ./work/*
+          cd
+          echo onTop
+          echo ./build
 
+          echo searchEnd
 
           # cd && ./build && zip -r 
           # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
