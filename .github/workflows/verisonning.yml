@@ -20,7 +20,8 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }} #레포지도리에 시크린에 깃헙토큰 추가
 
-      - name: create_release
+      - name: Create Release
+        id: create_release
         uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
