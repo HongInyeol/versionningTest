@@ -59,9 +59,9 @@ jobs:
 
           pwd
           ls -la
-          cd build
+          # cd build
           mkdir test
-          zip -r extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
+          zip -r extension-${{ steps.tag_version.outputs.new_tag }}.zip ./build
           pwd
           ls -la
 
