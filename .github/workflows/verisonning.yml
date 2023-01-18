@@ -57,7 +57,8 @@ jobs:
           npm install
           npm run build
           echo folderSearch
-          cd
+          ~
+          echo ls
           echo './*'
           echo ./*
           echo ../*
