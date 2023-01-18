@@ -60,8 +60,7 @@ jobs:
           ls -la
 
 
-          cd
-          build
+          cd build
           pwd
           ls -la
 
