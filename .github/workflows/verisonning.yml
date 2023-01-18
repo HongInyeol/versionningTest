@@ -56,32 +56,18 @@ jobs:
       - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
+
           pwd
           ls -la
-
-
           cd build
           mkdir test
           zip -r extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
           pwd
           ls -la
 
-          # zip -r 
-          # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
-          # ./*
-
-
-          # # cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
-
-
-          pwd
-          ls -la
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Release Asset
-      - run: |
-          pwd
-          ls -la
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
