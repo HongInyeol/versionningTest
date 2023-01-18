@@ -73,12 +73,15 @@ jobs:
 
           # # cd ./build && zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
 
-          cd
+
           pwd
           ls -la
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Release Asset
+      - run: |
+          pwd
+          ls -la
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
