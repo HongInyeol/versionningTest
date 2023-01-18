@@ -61,6 +61,8 @@ jobs:
 
 
           cd build
+          zip -r ../extension-${{ steps.tag_version.outputs.new_tag }}.zip ./*
+
           pwd
           ls -la
 
