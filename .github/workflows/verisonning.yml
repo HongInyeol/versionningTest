@@ -56,7 +56,8 @@ jobs:
       - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
-
+          pwd
+          ls -la
 
           # echo folderSearch
           # cd
