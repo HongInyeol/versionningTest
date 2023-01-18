@@ -56,26 +56,31 @@ jobs:
       - run: | #차례대로 cli 명령어 실행
           npm install
           npm run build
-          echo folderSearch
-          cd
-          mkdir build
-          ./build
+
+
+          # echo folderSearch
+          # cd
+          # mkdir build
+          # ./build
+          # pwd
+          # zip -r
+          # ls -la
+
+
+          # ../
+          # pwd
+          # ls -la
+          # ../
+          # pwd
+          # ls -la
+
+
+          # # cd && ./build && zip -r 
+          # # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
+          # # ./*
+      - run: |
           pwd
-          zip -r
           ls -la
-
-
-          ../
-          pwd
-          ls -la
-          ../
-          pwd
-          ls -la
-
-
-          # cd && ./build && zip -r 
-          # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
-          # ./*
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Release Asset
