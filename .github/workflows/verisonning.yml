@@ -59,6 +59,8 @@ jobs:
           echo folderSearch
           cd
           echo onTop
+          pwd
+          ls -la
           echo ./build
 
           echo searchEnd
