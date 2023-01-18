@@ -59,8 +59,12 @@ jobs:
           echo folderSearch
           cd
           mkdir build
+          ./build
           pwd
+          zip -r
           ls -la
+
+
           ../
           pwd
           ls -la
