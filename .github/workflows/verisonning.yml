@@ -59,26 +59,12 @@ jobs:
           pwd
           ls -la
 
-          # echo folderSearch
-          # cd
-          # mkdir build
-          # ./build
-          # pwd
-          # zip -r
-          # ls -la
 
-
-          # ../
-          # pwd
-          # ls -la
-          # ../
-          # pwd
-          # ls -la
-
-
-          # # cd && ./build && zip -r 
-          # # ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
-          # # ./*
+          cd
+          build
+          zip -r 
+          ../extension-${{ steps.tag_version.outputs.new_tag }}.zip 
+          ./*
       - run: |
           pwd
           ls -la
