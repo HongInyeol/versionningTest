@@ -58,6 +58,7 @@ jobs:
           npm run build
           echo folderSearch
           cd
+          mkdir build
           pwd
           ls -la
           ../
