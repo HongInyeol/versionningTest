@@ -16,14 +16,14 @@ jobs:
     steps:
       - name: 스텝투소분류1
         run: echo 'jobs그룹2 - steps1'
-  Test2: # jobs그룹1
-    name: test222
+  Test3: # jobs그룹1
+    name: test2221
     runs-on: ubuntu-latest
     steps:
       - name: 스텝투소분류1
         run: echo 'jobs그룹2 - steps1'
-  Test2: # jobs그룹1
-    name: test222
+  Test4: # jobs그룹1
+    name: test2222
     runs-on: ubuntu-latest
     steps:
       - name: 스텝투소분류1
