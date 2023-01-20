@@ -28,4 +28,7 @@ jobs:
       - name: 스텝투소분류1
         run: echo 'jobs그룹2 - steps1'
       - name: 스텝투 소분류2
-        run: echo 'jobs그룹3'
+        run: 
+        echo 'jobs그룹3'
+        echo 'jobs그룹4'
+
