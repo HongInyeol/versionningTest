@@ -21,16 +21,16 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }} #레포지도리에 시크린에 깃헙토큰 추가
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        with:
-          # tag_name: ${{ steps.tag_version.outputs.new_tag }} #상위 tag_version의 output 값을 tag_name으로
-          release_name: Release ${{ steps.tag_version.outputs.new_tag }} #릴리즈 이름
-          body: ${{ steps.tag_version.outputs.changelog }} 이게 바디였단말이야 #릴리즈 내용
 
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      #   with:
+      #     tag_name: ${{ steps.tag_version.outputs.new_tag }} #상위 tag_version의 output 값을 tag_name으로
+      #     release_name: Release ${{ steps.tag_version.outputs.new_tag }} #릴리즈 이름
+      #     body: ${{ steps.tag_version.outputs.changelog }} 이게 바디였단말이야 #릴리즈 내용
 
       # - name: Github Release 최신 tag 받아오기
       #   id: tag_version
