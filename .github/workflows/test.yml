@@ -6,7 +6,6 @@ on:
       - test
 
 jobs:
-  run-name: 런네임2
   build:
     name: Release Build
     strategy:
