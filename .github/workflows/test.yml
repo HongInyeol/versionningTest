@@ -1,5 +1,5 @@
-name: 첫번째 name
-
+run-name: workFlowTest
+name: Action_1
 on:
   push:
     branches:
