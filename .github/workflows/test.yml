@@ -9,6 +9,7 @@ jobs:
   # Test1: # jobs그룹1
   runs-on: ubuntu-latest
   steps:
+    - name: test1
     - run: echo 'jobs그룹1 - steps1'
   # Test2: # jobs그룹1
   # runs-on: ubuntu-latest
