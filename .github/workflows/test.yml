@@ -10,7 +10,3 @@ jobs:
     runs_on: ubuntu-latest
     steps:
       run: echo '우분투위에서 실행됩니다.'
-  Test2: #jobs 그룹1
-    runs_on: ubuntu-latest
-    steps:
-      run: echo 'Test2-run'
