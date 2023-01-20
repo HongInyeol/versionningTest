@@ -10,24 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'jobs그룹1 - steps1'
-  Test2: # jobs그룹1
-    runs-on: ubuntu-latest
-    steps:
-      - name: 스텝투소분류1
-        run: echo 'jobs그룹2 - steps1'
-  Test3: # jobs그룹1
-    name: test2221
-    runs-on: ubuntu-latest
-    steps:
-      - name: 스텝투소분류1
-        run: echo 'jobs그룹2 - steps1'
-  Test4: # jobs그룹1
-    name: test2222
-    runs-on: ubuntu-latest
-    steps:
-      - name: 스텝투소분류1
-        run: echo 'jobs그룹2 - steps1'
-      - name: 스텝투 소분류2
-        run: |
-          echo 'jobs그룹32'
-          echo 'jobs그룹42'
+      - name: test2
+        run: echo 'jobs그룹1- steps2'
