@@ -1,5 +1,4 @@
 name: 첫번째 name
-run-name: 런-네임
 
 on:
   push:
@@ -7,6 +6,7 @@ on:
       - test
 
 jobs:
+  run-name: 런네임2
   build:
     name: Release Build
     strategy:
