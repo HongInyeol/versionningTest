@@ -6,12 +6,12 @@ on:
       - test
 
 jobs:
-  # Test1: # jobs그룹1
-  name: test1
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo 'jobs그룹1 - steps1'
-  # Test2: # jobs그룹1
-  # runs-on: ubuntu-latest
-  # steps:
-  #   - run: echo 'jobs그룹2 - steps1'
+  Test1: # jobs그룹1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'jobs그룹1 - steps1'
+  Test2: # jobs그룹1
+    name: test222
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'jobs그룹2 - steps1'
