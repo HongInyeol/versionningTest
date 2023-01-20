@@ -23,9 +23,10 @@ jobs:
   tets:
     name: TTT
     steps:
-    run:
-      echo test
-      # - name: Create Release
+      - uses: actions/checkout@v3
+      - run:
+        echo test
+       # - name: Create Release
       #   id: create_release
       #   uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
       #   env:
