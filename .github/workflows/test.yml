@@ -24,9 +24,9 @@ jobs:
     name: TTT
     steps:
       - uses: actions/checkout@v3
-      - run:
+      - run: |
         echo test
-       # - name: Create Release
+      # - name: Create Release
       #   id: create_release
       #   uses: actions/create-release@latest #릴리즈 자동생성해주는녀석
       #   env:
