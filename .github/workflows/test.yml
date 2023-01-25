@@ -7,12 +7,15 @@ on:
 
 jobs:
   Test1: # jobs그룹1
-    name: Test1_name
+    name: Test1_name # name 미입력시 그룹 구분명이 사용됨
     runs-on: ubuntu-latest
     steps:
       - run: echo 'jobs그룹1 - steps1'
-      - name: test2
-        run: echo 'jobs그룹1- steps2'
+      - name: test2 # name이 없으면, 이후 실행되는 steps이 그대로 사용됨.
+        id: steps2
+        run: |
+          echo 'jobs그룹1- steps2'
+          echo '${{steps.steps2}}'
       - run: echo 'complete!!!!!'
   Test2:
     runs-on: ubuntu-latest
