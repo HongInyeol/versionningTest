@@ -13,8 +13,8 @@ jobs:
       - run: echo 'jobs그룹1 - steps1'
       - name: test2
         run: echo 'jobs그룹1- steps2'
-      - run: echo complete!!!!!
+      - run: echo 'complete!!!!!'
   Test2:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Test2_steps_run
+      - run: echo 'Test2_steps_run'
