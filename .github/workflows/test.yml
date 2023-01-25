@@ -17,4 +17,4 @@ jobs:
   Test2:
     runs-on: ubuntu-latest
     steps:
-      run: Test2_steps_run
+      - run: Test2_steps_run
