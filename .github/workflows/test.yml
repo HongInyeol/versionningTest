@@ -17,7 +17,8 @@ jobs:
           echo 'jobs그룹1- steps2'
           echo '${{ steps.steps2 }}'
       - run: echo 'complete!!!!!'
-  Test2:
+  Test-2:
+    needs: Test1
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Test2_steps_run'
