@@ -15,7 +15,7 @@ jobs:
         id: steps2
         run: |
           echo 'jobs그룹1- steps2'
-          echo '${{ steps.steps2.name }}'
+          echo '${{ steps.steps2 }}'
       - run: echo 'complete!!!!!'
   Test2:
     runs-on: ubuntu-latest
